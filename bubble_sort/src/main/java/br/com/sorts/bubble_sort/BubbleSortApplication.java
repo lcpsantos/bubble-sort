@@ -11,7 +11,6 @@ public class BubbleSortApplication {
     int contadorMudanca, i, x, aux;
     int[] numero = {2,2,10,7,6};
 
-    //Ordenação do vetor via bubble sort:
     contadorMudanca = 0;
     houveTroca = true;
 
@@ -22,13 +21,14 @@ public class BubbleSortApplication {
       for (x = 0; x < numero.length - 1; x++) {
         if (numero[x] > numero[x + 1]) {
           aux = numero[x];
+          //aqui ocorre a troca de posição
           numero[x] = numero[x + 1];
           numero[x + 1] = aux;
           houveTroca = true;
           contadorMudanca++;
 
           //Exibindo o status pós-troca na tela:
-          //limpaTela();
+          limpaTela();
           System.out.println(contadorMudanca + "ª mudança:");
           System.out.println();
 
@@ -53,7 +53,7 @@ public class BubbleSortApplication {
     }
 
     //E então, mostrando o resultado final:
-    //limpaTela();
+    limpaTela();
     System.out.println(
       "Depois de " + contadorMudanca + " alterações, eis o vetor ordenado:"
     );
@@ -63,7 +63,6 @@ public class BubbleSortApplication {
     }
   }
 
-  //Métodos Úteis
   public static void limpaTela() {
     for (int i = 0; i < 30; ++i) System.out.println();
   }
